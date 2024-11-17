@@ -1,0 +1,31 @@
+<div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+  <p-divider class="p-element w-full border-gray-200">
+    <div class="w-full border-gray-200 p-divider p-component p-divider-horizontal p-divider-solid p-divider-left"
+         role="separator">
+      <div class="p-divider-content"></div>
+    </div>
+  </p-divider>
+  <div class="grid grid-nogutter align-items-center">
+    <div class="col-12">
+      <div class="grid mt-4" >
+        <div class="col-12 md:col-6 lg:col-3 mb-5 lg:mb-0 h-100" *ngFor="let product of products">
+          <div class="mb-3 relative">
+            <img class="w-full" [src]="product.imageUrl">
+            <button class="p-ripple p-element border-1 border-white-alpha-20 border-round py-2 px-3 absolute bg-black-alpha-30 text-white inline-flex align-items-center justify-content-center hover:bg-black-alpha-40 transition-colors transition-duration-300 cursor-pointer font-semibold"
+                    pripple=""
+                    style="bottom: 1rem; left: 1rem; width: calc(100% - 2rem); backdrop-filter: blur(4px);"
+                    type="button">
+              <i class="pi pi-shopping-cart mr-3 text-base"></i><span class="text-base">Add to Cart</span>
+            </button>
+          </div>
+          <div class="flex flex-column align-items-center">
+            <span class="text-xl text-900 font-medium mb-3">{{ product.name }}</span>
+            <span class="text-xl text-900 mb-3">${{ product.price }}</span>
+            <span class="text-500">{{ product.color }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

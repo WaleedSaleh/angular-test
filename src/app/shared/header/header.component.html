@@ -1,0 +1,28 @@
+
+<div class="card">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="start">
+      <p-image
+        src="https://img.pikbest.com/png-images/ecommerce-logo-vector-graphics-element--e-commerce-logo-icon-design-online-store-logo-icon_1726010.png!sw800"
+        alt="Image"
+        width="150" />
+    </ng-template>
+    <ng-template pTemplate="item" let-item let-root="root">
+      <a pRipple class="flex align-items-center p-menuitem-link" routerLink="{{item.href}}">
+        <span [class]="item.icon"></span>
+        <span class="ml-2">{{ item.label }}</span>
+        <span *ngIf="item.shortcut" class="ml-auto border-1 surface-border border-round surface-100 text-xs p-1">{{ item.shortcut }}</span>
+        <i *ngIf="item.items" [ngClass]="['pi', root ? 'pi-angle-down ml-2' : 'pi-angle-right ml-auto']"></i>
+      </a>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <div class="flex align-items-center gap-2">
+        <input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto" />
+        <!-- Replace the user avatar with a shopping cart icon -->
+        <p-avatar icon="pi pi-shopping-cart" styleClass="ui-button-rounded"></p-avatar>
+        <!-- Badge showing the number of items in the cart -->
+        <p-badge value="2"></p-badge>
+      </div>
+    </ng-template>
+  </p-menubar>
+</div>

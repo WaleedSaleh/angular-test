@@ -1,0 +1,91 @@
+<div class="block-content">
+  <div class="ng-star-inserted">
+    <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
+      <div class="grid">
+        <div class="col-12 md:col-6">
+          <div class="p-fluid pr-0 md:pr-6">
+            <div class="field">
+              <label class="font-medium" for="name">Name</label>
+              <input
+                class="p-inputtext p-component p-element py-3 px-2 text-lg"
+                id="name"
+                pInputText=""
+                name="name"
+                type="text"
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="font-medium" for="email">Email</label>
+              <input
+                class="p-inputtext p-component p-element py-3 px-2 text-lg p-filled"
+                id="email"
+                pInputText=""
+                name="email"
+                type="email"
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="font-medium" for="company">Phone Number</label>
+              <input
+                class="p-inputtext p-component p-element py-3 px-2 text-lg"
+                id="company"
+                pInputText=""
+                type="text"
+                name="phone"
+                required
+              />
+            </div>
+            <div class="field">
+              <label class="font-medium" for="message">Message</label>
+              <textarea
+                class="p-inputtextarea p-inputtext p-component p-element py-3 px-2 text-lg p-inputtextarea-resizable"
+                id="message"
+                pInputTextarea=""
+                rows="6"
+                required
+                name="message"
+                style="height: 161px; overflow: hidden;"
+              ></textarea>
+            </div>
+            <button
+              class="p-element p-ripple w-auto p-button p-component"
+              icon="pi pi-send"
+              label="Send Message"
+              pButton=""
+              pRipple=""
+              type="submit"
+              (click)="onSubmit()"
+            >
+              <span
+                aria-hidden="true"
+                class="p-button-icon p-button-icon-left pi pi-send"
+              ></span>
+              <span class="p-button-label">Send Message</span>
+              <span
+                class="p-ink"
+                style="height: 179px; width: 179px; top: -68px; left: 70.5px;"
+              ></span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="col-12 md:col-6 bg-no-repeat bg-right-bottom"
+        >
+          <div class="text-900 text-2xl font-medium mb-6">Contact Us</div>
+          <div class="text-700 line-height-3 mb-6">
+            Welcome to my store :)
+          </div>
+          <a
+            class="inline-flex align-items-center text-blue-600 font-bold no-underline cursor-pointer"
+          >
+            <span class="mr-3">View Address on Google Maps</span>
+            <i class="pi pi-arrow-right"></i>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
