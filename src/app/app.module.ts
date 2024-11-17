@@ -18,6 +18,9 @@ import { ProductsComponent } from './products/products.component';
 import {DividerModule} from 'primeng/divider';
 import {MenuModule} from 'primeng/menu';
 import {OverlayModule} from 'primeng/overlay';
+import { HeroComponent } from './hero/hero.component';
+import {TabViewModule} from 'primeng/tabview';
+import {ImageModule} from 'primeng/image';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,8 @@ import {OverlayModule} from 'primeng/overlay';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProductsComponent
+    ProductsComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import {OverlayModule} from 'primeng/overlay';
     CardModule,
     DividerModule,
     MenuModule,
-    OverlayModule
+    OverlayModule,
+    TabViewModule,
+    ImageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
